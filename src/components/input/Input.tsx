@@ -1,3 +1,5 @@
 import React, { FC } from "react";
 
-export const Input: FC = () => <input />
+import style from './input.module.scss'
+
+export const Input: FC = () => <input className={style.input} />

@@ -29,22 +29,25 @@ export default defineConfig({
     },
   },
   plugins: [
-    eslint(),
+    eslint({
+      exclude: ['node_modules/', '**/*.scss']
+    }),
     peerDepsExternal(),
+    postcss({
+      autoModules: true,
+      extract: 'fnac-ui.css',
+      use: ['sass'],
+      minimize: true,
+      plugins: [postcssPresetEnv()]
+    }),
     typescript({
       useTsconfigDeclarationDir: true,
       tsconfigOverride: {
         exclude: ['**/*.stories.*', '**/*.css', '**/*.module.scss', 'node_modules'],
       },
     }),
-    postcss({
-      autoModules: true,
-      extract: false,
-      use: ['sass'],
-      plugins: [postcssPresetEnv()]
-    }),
     uglify({
-      sourcemap: false
+      sourcemap: false,
     }),
     analyze({
       hideDeps: true,
