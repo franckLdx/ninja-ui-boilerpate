@@ -1,3 +1,28 @@
-.buton {
-  background-color: black;
+.button {
+  font-size: medium;
+  font-weight: normal;
+  
+  &:hover {
+    cursor: pointer;
+  }
+  
+  &:active {
+    border: none;
+    cursor: wait;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &--primary {
+    color: white;
+    background-color: yellow;
+  }
+  
+  &--secondary {
+    color: white;
+    background-color: black;
+  }
+  
 }
