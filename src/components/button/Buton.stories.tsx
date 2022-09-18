@@ -11,6 +11,6 @@ const meta: ComponentMeta<typeof Button> = {
 
 export default meta
 
-export const Primary: ButonStory = () => <Button>Primary</Button >;
+export const Primary: ButonStory = () => <Button variant='primary'>Primary</Button >;
 
-export const Secondary: ButonStory = () => <Button>Secondary</Button>;
+export const Secondary: ButonStory = () => <Button variant='secondary'>Secondary</Button>;

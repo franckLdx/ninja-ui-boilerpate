@@ -43,7 +43,7 @@ export default defineConfig({
     typescript({
       useTsconfigDeclarationDir: true,
       tsconfigOverride: {
-        exclude: ['**/*.stories.*', '**/*.css', '**/*.module.scss', 'node_modules'],
+        exclude: ['**/*.stories.*', '**/*.css', '**/*.module.scss', 'node_modules', './dist'],
       },
     }),
     uglify({

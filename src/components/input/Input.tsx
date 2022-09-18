@@ -1,5 +1,15 @@
 import React, { FC } from "react";
+import { getVariantStyle } from "../../helpers";
 
-import style from './input.module.scss'
+import styles from './input.module.scss'
 
-export const Input: FC = () => <input className={style.input} />
+interface InputProps {
+  variant?: 'secondary',
+}
+
+export const Input: FC<InputProps> = ({ variant = 'secondary' }) => {
+  const variantStyle = getVariantStyle(styles, 'button', variant);
+  console.log('hello');
+
+  return <input className={`${styles.input} ${variantStyle}`} />
+}

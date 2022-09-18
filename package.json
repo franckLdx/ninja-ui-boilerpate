@@ -46,7 +46,8 @@
   },
   "scripts": {
     "prebuild": "rimraf ./dist",
-    "build": "rollup -c rollup.config.js ",
+    "build": "rollup -c rollup.config.js",
+    "watch": "rollup -w -c rollup.config.js",
     "postinstall": "install-peers",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"

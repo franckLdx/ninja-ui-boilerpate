@@ -1,3 +1,7 @@
+@import '../../stylesheets/_styles';
+
 .input {
-  background-color: yellowgreen;
+  &--secondary {
+    @include secondary;
+  }
 }

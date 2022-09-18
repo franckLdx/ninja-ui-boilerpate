@@ -1,0 +1,18 @@
+@import './_colors';
+
+@mixin primary {
+  color: $white;
+  background-color: $yellow;
+}
+
+@mixin secondary {
+  color: $black;
+  background-color: $white;
+  border-width: 1px;
+}
+
+@mixin secondary--dark {
+  color: $white;
+  background-color: $black;
+  border-width: 1px;
+}

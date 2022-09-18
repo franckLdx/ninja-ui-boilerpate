@@ -1,28 +1,36 @@
+@import '../../stylesheets/_styles';
+@import '../../stylesheets/animations';
+
 .button {
   font-size: medium;
   font-weight: normal;
+  border-radius: 5px;
+  transition: opacity $normal-duration;
+  padding: 5px;
   
   &:hover {
     cursor: pointer;
   }
   
   &:active {
-    border: none;
     cursor: wait;
+    opacity: .8;
   }
 
   &:disabled {
     cursor: not-allowed;
   }
-
+  
   &--primary {
-    color: white;
-    background-color: yellow;
+    @include primary;
+    border: none;
   }
   
   &--secondary {
-    color: white;
-    background-color: black;
+    @include secondary;
+    &:hover {
+      @include secondary--dark;
+    }
   }
   
 }
